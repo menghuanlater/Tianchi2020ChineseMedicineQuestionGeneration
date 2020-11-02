@@ -7,7 +7,8 @@
 
 **均为single model**
 
-包含数据集的完整项目文件百度盘链接: `https://pan.baidu.com/s/18ZXfIU8om1EhLqttcGkEtA`  提取码：`qagl`
+包含数据集的完整项目文件百度盘链接: `https://pan.baidu.com/s/1crAYwtDLrGnkls9xdfQdQg`  提取码：`qagl`
+(备注:网盘链接不稳定, 有可能会被百度误封, 如需完整数据文件, 可私信anlin781205936@126.com)
 
 模型整体思路: 预训练语言模型(RoBERTa_wwm_ext_large)作为编码器, Transformer-XL作为解码器(train from scratch)，使用其他阅读理解数据集进行预学习，再在比赛数据集上进行微调
 
