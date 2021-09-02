@@ -712,11 +712,7 @@ if __name__ == "__main__":
         torch.distributed.init_process_group(backend="nccl", rank=0, world_size=1, init_method='tcp://localhost:7011')
         args["is_train"] = True
         writer = SummaryWriter(logdir="RunLog/%s" % sys.argv[3])
-        if y is None:
-            train_dataset = MyDataset(data=x["train_items"], max_enc_len=args["max_enc_len"],
-                                      max_dec_len=args["max_dec_len"])
-        else:
-            train_dataset = MyDataset(data=x["train_items"] + y, max_enc_len=args["max_enc_len"],
+        train_dataset = MyDataset(data=x["train_items"], max_enc_len=args["max_enc_len"],
                                       max_dec_len=args["max_dec_len"])
         valid_dataset = MyDataset(data=x["valid_items"], max_enc_len=args["max_enc_len"],
                                   max_dec_len=args["max_dec_len"])
